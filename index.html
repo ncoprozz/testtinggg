@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .nav{
+           height: 60px;
+           display: flex;
+           width: 100%;
+           background-color: white;
+        }
+        .nav img{
+            display: inline-block;
+            height: 50px;
+            width: 50px;
+            margin-left: 5px;
+            
+        }
+        .nav .bar{
+           display: inline-block;
+           margin-left: 30px;
+           padding-top: 19px;
+        }
+        .nav .bar a{
+            padding: 21px 20px;
+            color: black;
+            text-decoration: none;
+            margin-bottom: 40px;
+        }
+        .nav .bar a:hover{
+            color: white;
+            background-color: rgb(41, 168, 98);
+        }
+        .nav .search{
+            margin-left: 25px;
+            margin-top: 10px;
+        }
+        .nav .search input{ 
+            border-radius: 30px;
+            height: 40px;
+        }
+        .nav .search input:focus{
+            border: 0,5px solid rgb(68, 155, 68);
+            outline: 5px solid rgb(68, 155, 68);
+        }
+        .nav .bar2{
+           display: inline-block;
+           margin-left: 30px;
+           padding-top: 20px;
+        }
+        .nav .bar2 a{
+            padding: 10px 30px;
+            color: black;
+            text-decoration: none;
+            margin-bottom: 40px;
+        }
+        .nav .bar2 a:hover{
+            background-color: #f2f2f2;
+            border-radius: 30px;
+        }
+        .nav .login1{
+           display: inline-block;
+           margin-left: 10px;
+           padding-top: 21px;
+        }
+        .nav .login1 a{
+            background-color: rgb(41, 168, 98);
+            padding: 10px 10px;
+            border-radius: 30px;
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            margin-bottom: 40px;
+        }
+        .nav .login2{
+           display: inline-block;
+           padding-top: 21px;
+        }
+        .nav .login2 a{
+            background-color: rgb(131, 197, 131);
+            padding: 10px 10px;
+            border-radius: 30px;
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            margin-bottom: 40px;
+        }
+        .nav .login2 a:hover{
+            color: white;
+            background-color: rgb(41, 168, 98);
+        }
+        .nav2{
+            position: fixed;
+            top: 60px;
+            background-color: #282A35;
+            width: 100%;
+            height: 30px;
+            white-space: nowrap;
+            overflow-x: auto;
+        }
+        .nav2::-webkit-scrollbar{
+            width: 0;
+            height: 0;
+        }
+        .nav2 .bar{
+            display: inline-block;
+            padding-top: 3px;
+        }
+        .nav2 .bar a{
+            text-decoration: none;
+            color: white;
+            padding: 5px 15px;
+        }
+        .nav2 .bar a:hover{
+            background-color: black;
+        }
+        
+        .main{
+            margin: 0px 0px;
+            background-image: url(background_in_space.webp);
+            background-size: cover;
+            height: 550px;
+        }
+         
+        .main h1{
+            padding-top: 150px;
+            font-size: 70px;
+            margin: 0px 400px;
+            text-align: center;
+            
+        }
+        .main h4{
+            padding-top: 35px;
+            text-align: center;
+            margin: 0px 400px;
+        }
+        .main .main-search{
+            text-align: center;
+            background-color: rgb(255, 255, 255);
+            padding-top: 10px;
+            margin-top: 35px;
+            margin-left: 420px;
+            height: 50px;
+            width: 500px;
+            border-radius: 40px;
+        }
+        .main .main-search input{
+            border: none;
+            background: none;
+            outline: none;
+            width: 450px;
+        }
+        .main a{
+            color: white;
+        }
+        .main .ast{
+            float: right;
+            margin-right: 150px;
+        }
+        .main .ast img{
+            height: 180px;
+            width: 180px;
+        }
+        .element{
+            background-color:  #cceecc;
+            height: 500px;
+        }
+        .element .kartu h1{
+            font-weight: bold;
+            font-size: 65px;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .element .kartu p{
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .element .kartu a{
+            text-decoration: none;
+        }
+        .element .kartu a p{
+            background-color: #3f9755;
+            margin-left: 70px;
+            padding: 10px;
+            border-radius: 50px;
+            width: 200px;
+        }
+        
+        .element .box1{
+            background-color: rgb(235, 235, 235);
+            float: left;
+            border-radius: 5px;
+            margin-top: 50px;
+            margin-left: 100px;
+            height: 430px;
+            width: 400px;
+        }
+        .element .box1 h4{
+            font-weight: bold;
+        }
+        .element .box1 .box-in{
+            border-left: #46a146 solid;
+            margin-left: 10px;
+            background-color: white;
+            height: 300px;
+            width: 360px;
+            color: black;
+        }
+        .element .box1 a h4{
+            font-size: 20px;
+            border-radius: 20px;
+            height: 30px;
+            text-align: center;
+            width: 200px;
+            color: white;
+            background-color: #46a146;
+            
+        }
+        .content{
+            background-color: #282A35;
+            width: 100%;
+            padding-top: 50px;
+            height: 4000px;
+        }
+        .content .box1{
+            display: inline-block;
+            padding-top: 50px;
+            border-radius: 10px;
+            height: 250px;
+            width: 600px;
+            margin-left: 30px;
+        }
+        .content .box1 h2{
+            font-weight: bold;
+        }
+        .content .box1 p{
+            font-weight: bold;
+        }
+        .content .box1 a h4{
+            font-size: 20px;
+            font-weight: bold;
+            margin-left: 200px;
+            padding: 10px;
+            width: 200px;
+            text-decoration: none;
+            background-color: rgb(41, 41, 41);
+            border-radius: 30px;
+        }
+        .content .box2{
+            display: inline-block;
+            border-radius: 10px;
+            height: 150px;
+            width: 600px;
+            margin-left: 30px;
+            margin-top: 30px;
+        }
+        .box2 a h3{
+            font-weight: bold;
+        }
+        .box3 a h3{
+            font-weight: bold;
+        }
+        .content .box3{
+            display: inline-block;
+            border-radius: 10px;
+            height: 100px;
+            width: 250px;
+            margin-left: 30px;
+            margin-top: 30px;
+        }
+        .content .box4{
+            text-align: center;
+            background-color: rgb(247, 245, 245);
+            margin: 0px 200px;
+            border-radius: 10px;
+            height: 300px;
+        }
+        .content .box5{
+            background-color: #3f9755;
+            width: 300px;
+            margin-left: 200px;
+            height: 40px;
+            border-radius: 5px;
+        }
+        .learning{
+            background-color: rgb(200, 243, 200);
+            width: 100%;
+            height: 500px;
+        }
+        .learning a img{
+            height: 400px;
+            width: 400px;
+            margin-top: 50px;
+            margin-left: 250px;
+        }
+        .learning .box{
+            text-align: center;
+            float: right;
+            height: 400px;
+            width: 400px;
+            margin-right: 250px;
+            margin-top: 50px;
+            
+        }
+        .plus{
+            background-color:  #1f1f2e;
+            height: 500px;
+            width: 100%;
+            
+        }
+        .plus .box{
+            height: 350px;
+            width: 500px;
+            margin-left: 420px;
+        }
+        .plus .box h1{
+            font-size: 50px;
+        }
+        
+        .plus .box p{
+            color: white;
+            text-align: center;
+            display: block;
+        }
+        .color{
+            background-color: antiquewhite;
+            width: 100%;
+            height: 350px;
+        }
+        .teacher{
+            background-color: #282A35;
+            width: 100%;
+            height: 500px;
+        }
+        .teacher .box{
+            height: 500px;
+            width: 400px;
+            margin-left: 200px;
+        }
+        .teacher .box a h4{
+            font-size: 20px;
+            font-weight: bold;
+            margin-left: 100px;
+            padding: 10px;
+            width: 200px;
+            background-color: #3f9755;
+            border-radius: 30px;
+        }
+        .game{
+            background-color: #96D4D4;
+            width: 100%;
+            height: 500px;
+        }
+        .quiz{
+            background-color: #282A35;
+            width: 100%;
+            height: 500px;
+        }
+        .quiz .box1{
+            margin-top: 50px;
+            background-color: #3f9755;
+            float: left;
+            margin-left: 100px;
+            width: 300px;
+            padding: 70px;
+            border-radius: 5px;
+            width: 500px;
+        }
+        .quiz .box2{
+            margin-top: 50px;
+            background-color: rgb(245, 245, 158);
+            float: right;
+            margin-right: 100px;
+            width: 300px;
+            padding: 70px;
+            border-radius: 5px;
+            width: 500px;
+        }
+        .template{
+            background-color: #E7E9EB;
+            width: 100%;
+            height: 700px;
+        }
+        .career{
+            background-color: #282A35;
+            height: 500px;
+            width: 100%;
+        }
+        .how-to{
+            background-color: #E7E9EB;
+            width: 100%;
+            height: 1000px;
+
+        }
+        .how-to .box{
+            background-color: #e3e6e8;
+            width: 1100px;
+            height: 420px;
+            margin-left: 130px;
+        }
+        .element .kartu{
+            float: left;
+            border: none;
+            background-color: #cceecc;
+            width: 350px;
+            margin-left: 300px;
+            height: 500px;
+        }
+        .how-to .p{   
+            width:60px;
+            background-color: #282A35;
+            height: 100px;
+        }
+        .card{
+            background-color: #1E1E2F;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            height: 600px;
+            width: 100%;
+            width: 100%;
+        }
+        .card header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .card header nav a{
+            text-decoration: none;
+            color: #FFF4A3;
+            padding: 0px 20px;
+        }
+        .card header nav a:hover{
+            text-decoration: underline;
+        }
+        .card h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        .card .container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .card .column {
+            flex: 1;
+            margin: 0 10px;
+        }
+        .card ul li{
+            list-style: none;
+        }
+        .card ul li a{
+            text-decoration: none;
+            color: white;
+        }
+        .card ul li a:hover{
+            color: #FFF4A3;
+        }
+        .card h3 {
+            margin-left: 50px;
+            padding-bottom: 10px;
+        }
+        .card footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.8em;
+        }
+        .card footer .logo a{
+            padding: 0px 10px;
+        }
+        .card footer .logo a:hover{
+            color: #FFF4A3;
+        }
+        .card footer nav a{
+            text-decoration: none;
+            color: white;
+            padding: 0px 20px;
+        }
+        .card footer nav a:hover{
+            color: #FFF4A3;
+            text-decoration: underline;
+        }
+        </style>
+</head>
+<body>
+    <div class="nav fixed-top">
+        <a href=""><img src="W3Schools_logo.svg.png" alt=""></a>
+        <div class="bar">
+            <a href="Tutorial.html">Tutorial</a>
+            <a href="Excercises.html">Excercise</a>
+            <a href="Certificates.html">Certificates</a>
+            <a href="Service.html">Service</a>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="Search...">
+        </div>
+        <div class="bar2">
+            <a href="">Spaces</a>
+            <a href="">For Teacher</a>
+            <a href="">Get Certified</a>
+        </div>
+        <div class="login1">
+            <a href="" class="text-decoration-none">Sing Up</a>
+        </div>
+        <div class="login2">
+            <a href="" class="text-decoration-none">Log In</a>
+        </div>
+    </div>
+    <div class="nav2">
+        <div class="bar">
+            <a href="#">HTML</a>
+            <a href="#">CSS</a>
+            <a href="#">JAVASCRIPT</a>
+            <a href="#">SQL</a>
+            <a href="PHYTON MENU/index.html">PHYTON</a>
+            <a href="#">JAVA</a>
+            <a href="#">PHP</a>
+            <a href="#">HOW TO</a>
+            <a href="#">W3.CSS</a>
+            <a href="#">C</a>
+            <a href="#">C++</a>
+            <a href="#">C#</a>
+            <a href="#">BOOTSTRAP</a>
+            <a href="#">REACT</a>
+            <a href="#">MYSQL</a>
+            <a href="#">JQUERY</a>
+            <a href="#">EXCEL</a>
+            <a href="#">DJANGO</a>
+            <a href="#">NUMPY</a>
+            <a href="#">PANDAS</a>
+            <a href="#">NODEJS</a>
+            <a href="#">DSA</a>
+            <a href="#">TYPESCRIPT</a>
+            <a href="#">ANGULAR</a>
+            <a href="#">GIT</a>
+            <a href="#">POSTGRESQL</a>
+            <a href="#">MONGODB</a>
+            <a href="#">ASP</a>
+            <a href="#">AI</a>
+            <a href="#">R</a>
+            <a href="#">GO</a>
+            <a href="#">KOTLIN</a>
+            <a href="#">SASS</a>
+            <a href="#">VUE</a>
+            <a href="#">GEN AI</a>
+            <a href="#">SCIPY</a>
+            <a href="#">CYBERSECURITY</a>
+        </div>
+    </div>
+    <!---Main Content-->
+
+ <div class="main">
+    <h1 class="text-center text-white fw-bold">Learn To Code</h1>
+    <div class="ast">
+     <img src="Gambar Main Menu/astronot.jpg" alt="">
+    </div>
+    <h4 class="text-center fw-bold" style="color: rgb(219, 219, 80);">With the world's largest web developer site.</h4>
+    
+    <div class="main-search">
+     <input type="text" placeholder="Search our tutorials, e.g.HTML"><i class="fa-solid fa-magnifying-glass"></i>
+    </div>
+    <a href="#">
+     <h4 class="text-white fw-bold">Not Sure Where To Begin?</h4>
+    </a>
+ </div>
+
+ <div class="element">
+     <div class="kartu">
+         <h1 class="fw-bold">HTML</h1>
+         <p>The language for building web pages</p>
+         <a href="" class="text-decoratin-none">
+            <p class="text-white text-center fw-bold" style="background-color: #3f9755;">Learn HTML</p>
+         </a>
+         <a href="" class="text-decoratin-none">
+            <p class=" text-center fw-bold text-dark" style="background-color: rgb(218, 233, 133);">Video Tutorial</p>
+         </a>
+         <a href="" class="text-decoratin-none">
+            <p class="text-white text-center bg-dark">Learn HTML</p>
+         </a>
+         <a href="" class="text-decoratin-none">
+            <p class=" text-center fw-bold text-dark" style="background-color: pink;">Learn HTML</p>
+         </a>
+         
+     </div>
+     <div class="box1">
+         <h4 class="text-start pt-4 ps-4 fw-bold" style="color: black;">HTML Example:</h4>
+         <div class="box-in">
+            <img src="Gambar Main Menu/htmltext.png" alt="">
+         </div>
+         <a href="#" style="text-decoration: none;">
+            <h4 class="mt-3 ms-4">Try It Your Self</h4>
+         </a>
+     </div>
+ </div>
+ <div class="element" style="background-color: rgb(245, 245, 158);">
+     <div class="kartu" style="background-color: rgb(245, 245, 158);">
+         <h1 >CSS</h1>
+         <p class="fw-bold">The language for styling web pages</p>
+         <a href="#" class="text-white text-center"><p class="fw-bold" style="background-color: #3f9755;">Learn CSS</p></a><br>
+         <a href="#" class="text-white text-center"><p class="fw-bold bg-dark">CSS Refrence</p></a><br>
+         <a href="#" class="text-white text-center"><p style="color: black; background-color: pink;" class="fw-bold">Get Certified</p></a>
+     </div>
+     <div class="box1">
+         <h4 class="text-start pt-4 ps-4 fw-bold" style="color: black;">CSS Example:</h4>
+         <div class="box-in">
+            <img src="Gambar Main Menu/csstext.png" alt="">
+         </div>
+         <a href="#" style="text-decoration: none;">
+             <h4 class="mt-3 ms-4">Try It Your Self</h4>
+         </a> 
+     </div>
+ </div>
+ <div class="element" style="background-color: #282A35;">
+     <div class="kartu" style="background-color: #282A35;">
+         <h1 class="text-white fw-bold">JavaScript</h1>
+         <p class="text-white fw-bold">The language for programming web pages</p>
+         <a href="#" class="text-white text-center"><p class="fw-bold">Learn JavaScript</p></a><br>
+         <a href="#" class="text-dark text-center"><p class="fw-bold bg-white">JavaScript Refrence</p></a><br>
+         <a href="#" class="text-white text-center" ><p style="color: black; background-color: pink;" class="fw-bold">Get Certified</p></a>
+     </div>
+     <div class="box1">
+         <h4 class="text-start pt-4 ps-4" style="color: black;">JavaScript Example:</h4>
+         <div class="box-in">
+            <img src="Gambar Main Menu/javascripttext.png" alt="">
+         </div>
+         <a href="#" style="text-decoration: none;">
+             <h4 class="mt-3 ms-4">Try It Your Self</h4>
+         </a>
+     </div>
+ </div>
+ <div class="element" style="background-color: rgb(199, 199, 199);">
+     <div class="kartu" style="background-color: rgb(199, 199, 199);">
+         <h1 class="text-dark">Phyton</h1>
+         <p class="text-dark">A popular programming language</p>
+         <a href="#" class="text-white text-center"><p>Learn Phton</p></a><br>
+         <a href="#" class="text-dark text-center"><p class="bg-white">Phyton Refrence</p></a><br>
+         <a href="#" class="text-white text-center"><p style="color: black; background-color: pink;">Get Certified</p></a>
+     </div>
+     <div class="box1">
+         <h4 class="text-start pt-4 ps-4" style="color: black;">Phyton Example:</h4>
+         <div class="box-in">
+            <img src="Gambar Main Menu/phtyontext.png" alt="">
+         </div>
+         <a href="#" style="text-decoration: none;">
+             <h4 class="mt-3 ms-4">Try It Your Self</h4>
+         </a>
+     </div>
+ </div>
+ <div class="element" style="background-color: rgb(182, 224, 236);">
+     <div class="kartu" style="background-color: rgb(182, 224, 236);">
+         <h1 class="text-dark">SQL</h1>
+         <p class="text-dark">A language for accessing databases</p>
+         <a href="#" class="text-white text-center"><p>Learn SQL</p></a><br>
+         <a href="#" class="text-dark text-center"><p class="bg-white">SQL Refrence</p></a><br>
+         <a href="#" class="text-white text-center" ><p style="color: black; background-color: pink;">Get Certified</p></a>
+     </div>
+     <div class="box1">
+         <h4 class="text-start pt-4 ps-4" style="color: black;">SQL Example:</h4>
+         <div class="box-in">\
+            <img src="Gambar Main Menu/sqltext.png" alt="">
+         </div>
+         <a href="#" style="text-decoration: none;">
+             <h4 class="mt-3 ms-4">Try It Your Self</h4>
+         </a>
+     </div>
+ </div>
+
+ 
+ <div class="content">
+     <!---BOX1-->
+
+     <div class="box1 text-center" style="background-color: rgb(224, 151, 175);">
+          <h2>PHP</h2>
+          <p>A web server programming language</p>
+          <a href="#" style="text-decoration: none;">
+             <h4 class="text-white">Learn PHP</h4>
+          </a>
+     </div>
+     <div class="box1 text-center" style="background-color: rgb(253, 255, 164); margin-left: 70px;">
+          <h2>jQuery</h2>
+          <p>A JS library for developing web pagese</p>
+          <a href="#" style="text-decoration: none">
+             <h4 class="text-white">Learn jQuery</h4>
+          </a>
+     </div>
+     <div class="box1 text-center mt-5" style="background-color: rgb(243, 243, 228); margin-left: 70px; margin-left: 30px;">
+         <h2>JAVA</h2>
+         <p>A programming language</p>
+         <a href="Java_Home.html" style="text-decoration: none">
+            <h4 class="text-white">Learn JAVA</h4>
+         </a>
+    </div>
+    <div class="box1 text-center mt-5" style="background-color: rgb(199, 245, 201); margin-left: 70px; margin-left: 70px;">
+     <h2>C++</h2>
+     <p>A programming language</p>
+     <a href="#" style="text-decoration: none">
+        <h4 class="text-white">Learn C++</h4>
+     </a>
+     </div>
+     <div class="box1 text-center mt-5" style="background-color: rgb(165, 208, 219); margin-left: 70px; margin-left: 30px;">
+         <h2>W3.CSS</h2>
+         <p>A CSS framework for faster and better responsive web pages</p>
+         <a href="#" style="text-decoration: none">
+            <h4 class="text-white">Learn W3.CSS</h4>
+         </a>
+    </div>
+    <div class="box1 text-center mt-5" style="background-color: rgb(228, 228, 228); margin-left: 70px; margin-left: 70px;">
+     <h2>Bootstrap</h2>
+     <p>A CSS framework for designing better web pages</p>
+     <a href="#" style="text-decoration: none">
+        <h4 class="text-white">Learn Bootstrap</h4>
+     </a>
+     </div>
+     <!---BOX2-->
+     <a href="">
+    <div class="box2" style="background-color: pink;">
+     
+         <h3 class="mt-5 text-center text-dark fw-bold">C</h3>
+     
+    </div>
+    </a>
+    <div class="box2" style="background-color: rgb(234, 245, 138); margin-left: 70px;">
+     <a href="#" style="text-decoration: none;">
+         <h3 class="mt-5 text-center text-dark">C#</h3>
+     </a>
+    </div>
+    <!--BOX3 Kiri-->
+    <div class="box3" style="background-color: aliceblue;">
+     <a href="#" style="text-decoration: none;">
+         <h3 class="text-center text-dark mt-4">R</h3>
+     </a>
+    </div>
+    <div class="box3" style="background-color: rgb(187, 243, 201); margin-left: 100px;">
+     <a href="#" style="text-decoration: none;">
+         <h3 class="text-center text-dark mt-4">Kotlin</h3>
+     </a>
+    </div>
+ <!---BOX3 Kanan-->
+    <div class="box3" style="background-color: rgb(176, 218, 255); margin-left: 65px;">
+     <a href="#" style="text-decoration: none;">
+         <h3 class="text-center text-dark mt-4">Node.js</h3>
+     </a>
+    </div>
+    <div class="box3" style="background-color: rgb(233, 153, 209); margin-right: 45px; float: right;">
+     <a href="#" style="text-decoration: none;">
+         <h3 class="text-center text-dark mt-4">React</h3>
+     </a>
+    </div>
+ <!-------->
+    <div class="box3" style="background-color: rgb(218, 233, 133);">
+     <a href="#" style="text-decoration: none;">
+         <h3 class="text-center text-dark mt-4">JSON</h3>
+     </a>
+    </div>
+    <div class="box3" style="background-color: rgb(238, 248, 240); margin-left: 100px;">
+     <a href="#" style="text-decoration: none;">
+         <h3 class="text-center text-dark mt-4">Vue</h3>
+     </a>
+    </div>
+    <div class="box3" style="background-color: rgb(187, 243, 201); margin-left: 65px;">
+     <a href="#" style="text-decoration: none;">
+         <h3 class="text-center text-dark mt-4">MySql</h3>
+     </a>
+    </div>
+    <div class="box3" style="background-color: rgb(176, 218, 255); margin-right: 45px; float: right;">
+     <a href="#" style="text-decoration: none;">
+         <h3 class="text-center text-dark mt-4">XML</h3>
+     </a>
+    </div>
+    <div class="box3" style="background-color: rgb(233, 153, 209);">
+     <a href="#" style="text-decoration: none;">
+         <h3 class="text-center text-dark mt-4">Sass</h3>
+     </a>
+    </div>
+    <div class="box3" style="background-color: rgb(218, 233, 133); margin-left: 100px;">
+     <a href="#" style="text-decoration: none;">
+         <h3 class="text-center text-dark mt-4">Icons</h3>
+     </a>
+    </div>
+    <div class="box3" style="background-color: rgb(238, 248, 240); margin-left: 65px;">
+     <a href="#" style="text-decoration: none;">
+         <h3 class="text-center text-dark mt-4">RWD</h3>
+     </a>
+    </div>
+    <div class="box3" style="background-color: rgb(187, 243, 201); margin-right: 45px; float: right;">
+     <a href="#" style="text-decoration: none;">
+         <h3 class="text-center text-dark mt-4">Grapichs</h3>
+     </a>
+    </div>
+    <div class="box3" style="background-color: rgb(165, 208, 219);">
+     <a href="#" style="text-decoration: none;">
+         <h3 class="text-center text-dark mt-4">SVG</h3>
+     </a>
+    </div>
+    <div class="box3" style="background-color: rgb(233, 153, 209); margin-left: 100px;">
+     <a href="#" style="text-decoration: none;">
+         <h3 class="text-center text-dark mt-4">Canvas</h3>
+     </a>
+    </div>
+    <div class="box3" style="background-color: rgb(218, 233, 133); margin-left: 65px;">
+     <a href="#" style="text-decoration: none;">
+         <h3 class="text-center text-dark mt-4">Raspberry PI</h3>
+     </a>
+    </div>
+    <div class="box3" style="background-color: rgb(238, 248, 240); margin-right: 45px; float: right;">
+     <a href="#" style="text-decoration: none;">
+         <h3 class="text-center text-dark mt-4">Cyber Security</h3>
+     </a>
+    </div>
+    <div class="box3" style="background-color: rgb(187, 243, 201);">
+     <a href="#" style="text-decoration: none;">
+         <h3 class="text-center text-dark mt-4">Colors</h3>
+     </a>
+    </div>
+    <div class="box3" style="background-color: rgb(165, 208, 219); margin-left: 100px;">
+     <a href="#" style="text-decoration: none;">
+         <h3 class="text-center text-dark mt-4">Git</h3>
+     </a>
+    </div>
+    <div class="box3" style="background-color: rgb(233, 153, 209); margin-left: 65px;">
+     <a href="#" style="text-decoration: none;">
+         <h3 class="text-center text-dark mt-4">Matplotib</h3>
+     </a>
+    </div>
+    <div class="box3" style="background-color: rgb(218, 233, 133); margin-right: 45px; float: right;">
+     <a href="#" style="text-decoration: none;">
+         <h3 class="text-center text-dark mt-4">NumPy</h3>
+     </a>
+    </div>
+    <div class="box3" style="background-color: rgb(238, 248, 240);">
+     <a href="#" style="text-decoration: none;">
+         <h3 class="text-center text-dark mt-4">Pandas</h3>
+     </a>
+    </div>
+    <div class="box3" style="background-color: rgb(187, 243, 201); margin-left: 100px;">
+     <a href="#" style="text-decoration: none;">
+         <h3 class="text-center text-dark mt-4">ScIpy</h3>
+     </a>
+    </div>
+    <div class="box3" style="background-color: rgb(165, 208, 219); margin-left: 65px;">
+     <a href="#" style="text-decoration: none;">
+         <h3 class="text-center text-dark mt-4">ASP</h3>
+     </a>
+    </div>
+    <div class="box3" style="background-color: rgb(233, 153, 209); margin-right: 45px; float: right;">
+     <a href="#" style="text-decoration: none;">
+         <h3 class="text-center text-dark mt-4">AngularJs</h3>
+     </a>
+    </div>
+    <div class="box3" style="background-color: rgb(218, 233, 133);">
+     <a href="#" style="text-decoration: none;">
+         <h3 class="text-center text-dark mt-4">AppML</h3>
+     </a>
+    </div>
+    <div class="box3" style="background-color: rgb(238, 248, 240); margin-left: 100px;">
+     <a href="#" style="text-decoration: none;">
+         <h3 class="text-center text-dark mt-4">Go</h3>
+     </a>
+    </div>
+    <div class="box3" style="background-color: rgb(187, 243, 201); margin-left: 65px;">
+     <a href="#" style="text-decoration: none;">
+         <h3 class="text-center text-dark mt-4">TypeScript</h3>
+     </a>
+    </div>
+    <div class="box3" style="background-color: rgb(165, 208, 219); margin-right: 45px; float: right;">
+     <a href="#" style="text-decoration: none;">
+         <h3 class="text-center text-dark mt-4">Django</h3>
+     </a>
+    </div>
+    <div class="box3" style="background-color: rgb(233, 153, 209);">
+     <a href="#" style="text-decoration: none;">
+         <h3 class="text-center text-dark mt-4">MongoDB</h3>
+     </a>
+    </div>
+    <div class="box3" style="background-color: rgb(218, 233, 133); margin-left: 100px;">
+     <a href="#" style="text-decoration: none;">
+         <h3 class="text-center text-dark mt-4">Statistic</h3>
+     </a>
+    </div>
+    <div class="box3" style="background-color: rgb(238, 248, 240); margin-left: 65px;">
+     <a href="#" style="text-decoration: none;">
+         <h3 class="text-center text-dark mt-4">Data Science</h3>
+     </a>
+    </div>
+    <div class="box3" style="background-color: rgb(187, 243, 201); margin-right: 45px; float: right;">
+     <a href="#" style="text-decoration: none;">
+         <h3 class="text-center text-dark mt-4">PostgreSQL</h3>
+     </a>
+    </div>
+    <div class="box3" style="background-color: rgb(165, 208, 219);">
+     <a href="#" style="text-decoration: none;">
+         <h3 class="text-center text-dark mt-4">HowTo</h3>
+     </a>
+    </div>
+    <div class="box3" style="background-color: rgb(233, 153, 209); margin-left: 100px;">
+     <a href="#" style="text-decoration: none;">
+         <h3 class="text-center text-dark mt-4">Code Game</h3>
+     </a>
+    </div>
+    <div class="box3" style="background-color: rgb(218, 233, 133); margin-left: 65px;">
+     <a href="#" style="text-decoration: none;">
+         <h3 class="text-center text-dark mt-4">Spaces</h3>
+     </a>
+    </div>
+    <div class="box3" style="background-color: rgb(238, 248, 240); margin-right: 45px; float: right;">
+     <a href="#" style="text-decoration: none;">
+         <h3 class="text-center text-dark mt-4">Typing Seed</h3>
+     </a>
+    </div>
+    <div class="box2" style="background-color: rgb(165, 208, 219);">
+     <a href="#" style="text-decoration: none;">
+         <h3 class="mt-5 text-center text-dark">Excel</h3>
+     </a>
+    </div>
+    <div class="box2" style="background-color: rgb(234, 245, 138); margin-left: 70px;">
+     <a href="#" style="text-decoration: none;">
+         <h3 class="mt-5 text-center text-dark">DSA - Data Structures and Algorithms</h3>
+     </a>
+    </div>
+    <div class="box2" style="background-color: rgb(233, 153, 209);">
+     <a href="#" style="text-decoration: none;">
+         <h3 class="mt-5 text-center text-dark">Machine Learning</h3>
+     </a>
+    </div>
+    <div class="box2" style="background-color: rgb(238, 248, 240); margin-left: 70px;">
+     <a href="#" style="text-decoration: none;">
+         <h3 class="mt-5 text-center text-dark">Artificial Intelligence</h3>
+     </a>
+    </div>
+    
+    <h1 class="text-center text-white fw-bold" style="font-size: 70px; margin-top: 100px;">Code Editor</h1>
+    <p class="text-center text-white fw-bold">With our online code editor, you can edit code and view the result in your browser</p>
+    <div class="box4">
+      
+    </div>
+    <div class="box5 mt-3">
+       <a href="#" style="text-decoration: none;">
+          <p class="fw-bold text-white text-center pt-2">Try Frontend Editor (HTML/CSS/JS)</p>
+       </a>
+    </div>
+    <div class="box5 mt-3" style="width: 350px; background-color: rgb(255, 255, 124)">
+       <a href="#" style="text-decoration: none;">
+          <p class="fw-bold text-dark text-center pt-2">Try Backtend Editor (Phyton/PHP/JAVA)</p>
+       </a>
+    </div>
+    <h1 class="text-center fw-bold text-white mt-5" style="font-size: 70px;">W3Schools Spaces</h1>
+    <p class=" text-center text-white mt-3 fw-bold" style="font-size: 20px;">If you want to create your own website, check out
+     <a href="#" style="color: rgb(243, 199, 134);">W3Schools Spaces.</a></p>
+    <p class="text-center text-white fw-bold" style="font-size: 20px;">It is free to use, and does not require any setup:</p>
+    <div class="box4" style="border-radius: 0px;"></div>
+    <a href="#" class="text-decoration-none text-center">
+     <p class=" fw-bold text-white p-3" style="background-color: #3f9755; margin-top: 70px; width: 300px; margin-left: 530px; border-radius: 30px;">Learn More</p>
+    </a>
+</div>
+<div class="learning">
+ <a href="#">
+   <img src="Gambar Main Menu/mylearning24.webp" alt="">
+   </a>
+   <div class="box">
+    <h1 class="fw-bold" style="font-size: 50px;">My Learning</h1>
+    <p class="fw-bold mt-5 d-block">Track your progress with</p>
+    <p class="fw-bold d-block" style="margin-top: 0px;">our free "My Learning" program.</p><br>
+    <p class="fw-bold d-block">Log in to your account, and start earning points!</p>
+    <a href="#" class="text-decoration-none">
+    <p class="text-white fw-bold text-center p-3 mt-3" style="background-color: #3f9755; width: 250px; border-radius: 40px; margin-left: 70px;"> Sing Up for Free</p>
+    </a>
+   </div>
+</div>
+<div class="plus">
+ <div class="box">
+     <h1 class="text-center text-white fw-bold pt-5">Become Plus User</h1>
+     <h3 class="text-center fw-bold" style="color: pink;">And unlock powerful features:</h3>
+     <p class="fw-bold mt-5">Browse W3Schools without ads</p>
+     <p class="fw-bold text-start" style="margin-left: 128px;">Build and host Websites</p>
+     <p class="fw-bold text-start" style="margin-left: 128px;">Get extra credits</p>
+     <p class="fw-bold text-start" style="margin-left: 128px;">Priority support</p>
+ </div>
+ <p class="text-white fw-bold text-center p-3 mt-5" style="background-color: #3f9755; width: 350px; border-radius: 40px; margin-left: 500px;">Learn More</p>
+ </div>
+ <div class="color">
+     <h1 class="text-center fw-bold pt-5" style="font-size: 60px;">Color Picker</h1>
+     <p class=" text-center fw-bold mt-3">W3Schools' famous color picker:</p>
+     <a href="#">
+         <img src="Gambar Main Menu/colorpicker2000.png" class="mt-4" style="height: 100px; width: 120px; margin-left: 600px;">
+     </a>
+ </div>
+ <div class="teacher">
+     <a href="#">
+         <img src="Gambar Main Menu/classroom.webp" class="float-end" style="height: 350px; width: 400px; margin-right: 200px; margin-top: 50px;">
+     </a>
+     <div class="box text-center">
+         <h1 class="text-white fw-bold pt-5" style="font-size: 50px;">For Teachers</h1>
+         <p class="fw-bold text-white">Streamline your teaching:</p>
+         <p class="fw-bold text-white mt-5">Manage your classroom</p>
+         <p class="fw-bold text-white" style="margin-left: 57px;">Ready-to-use learning materials</p>
+         <p class="fw-bold text-white" style="margin-right: 13px;">Customize study plans</p>
+         <p class="fw-bold text-white" style="margin-right: 13px;">Track student progress</p>
+         <p class="fw-bold text-white" style="margin-left: 40px;">Interactive coding challenges</p>
+         <a href="#" style="text-decoration: none;">
+             <h4 class="text-white mt-5">Learn More</h4>
+          </a>
+     </div>
+ </div>
+ <div class="game">
+     <h1 class="text-center fw-bold" style="font-family: cursive; font-size: 50px; padding-top: 30px;">Code Game</h1>
+     <p class="text-center fw-bold" style="font-family: cursive; font-size: 30px;">Help the Lynx collect pine cones!</p>
+     <center><img src="boneka.webp"></center>
+    <a href="#" class="text-decoration-none"> <p style="background-color: #282A35; border-radius: 30px; width: 200px;margin-left: 580px;" class="p-3 text-white text-center fw-bold mt-5">Play Game</p></a>
+ </div>
+ <div class="quiz">
+     <h1 class="text-center fw-bold text-white pt-5" style="font-size: 50px;">Exercises and Quizzes</h1> 
+     <p class="text-center fw-bold text-white">Test your skills!</p>
+     <a href="#" class="text-decoration-none">
+         <div class="box1">
+             <h3 class="fw-bold text-center text-white">Exercises</h3>
+         </div>
+     </a>
+     <a href="#" class="text-decoration-none">
+         <div class="box2">
+             <h3 class="fw-bold text-center text-dark">Quizzes</h3>
+         </div>
+     </a>
+ </div>
+ <div class="template">
+     <h1 class="text-center fw-bold pt-5" style="font-size: 60px;">Web Templates</h1>
+     <p class="text-center fw-bold">Browse our selection of free responsive HTML Templates</p>
+     <a href="#">
+         <center><img src="Gambar Main Menu/Screenshot 2025-03-21 194920.png" class="mt-4"></center>
+     </a>
+     <a href="#" class="text-decoration-none">
+         <center><p class="text-center fw-bold text-white p-3 mt-5" style="background-color: #282A35; width: 600px; border-radius: 20px;">Browse Temlates</p></center>
+     </a>
+ </div>
+ <div class="career">
+     <h1 style="color: #FFC0C7; font-size: 60px;" class="fw-bold pt-5 ms-3">Kickstart your career</h1>
+     <h1 style="color: #FFC0C7; font-size: 50px; margin-top: 100px;" class="fw-bold ms-3">Get certified by completing a course</h1>
+     <a href="#" class="text-decoration-none">
+         <p class="text-white text-center ms-3 p-3 mt-5 fw-bold" style="background-color: #3f9755; width: 200px; border-radius: 30px;">Get Started</p>
+     </a>
+ </div>
+ <div class="how-to">
+     <h1 class="text-center pt-5 fw-bold" style="font-size: 50px;">How To Section</h1>
+     <h6 class="text-center fw-bold">Code snippets for HTML, CSS and JavaScript</h6>
+     <p class="text-center fw-bold mt-5">For example, how to create a slideshow:</p>
+     
+     <div class="box bg-warning" >
+        
+     </div>
+     
+     <center><div class="p"></div></center>
+     <center><a href="#" class="text-decoration-none"><p class="text-white fw-bold p-3" style="width: 500px; border-radius: 20px; background-color: #282A35;">Learn How To</p>
+     </a></center>
+ </div>
+</div>
+<div class="card">
+    <header>
+        <nav>
+            <a href="#">PLUS</a> 
+            <a href="#">SPACES</a> 
+            <a href="#">GET CERTIFIED</a> 
+            <a href="#">FOR TEACHERS</a> 
+            <a href="#">FOR BUSINESS</a>
+            <a href="#">CONTACT US</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="column">
+            <h3>Top Tutorial</h3>
+            <ul>
+                <li><a href="">Html Tutorial</a></li>
+                <li><a href="">CSS Tutorial</a></li>
+                <li><a href="">JavaScript Tutorial</a></li>
+                <li><a href="">How To Tutorial</a></li>
+                <li><a href="">SQL Tutorial</a></li>
+                <li><a href="">Phyton Tutorial</a></li>
+                <li><a href="">W.3CSS Tutorial</a></li>
+                <li><a href="">Bootstrap Tutorial</a></li>
+                <li><a href="">PHP Tutorial</a></li>
+                <li><a href="">Java Tutorial</a></li>
+                <li><a href="">C++ Tutorial</a></li>
+                <li><a href="">jQuery Tutorial</a></li>
+            </ul>
+        </div>
+        <div class="column">
+            <h3>Top References</h3>
+            <ul>
+                <li><a href="">Html Refrence</a></li>
+                <li><a href="">CSS Refrence</a></li>
+                <li><a href="">JavaScript Refrence</a></li>
+                <li><a href="">How To Refrence</a></li>
+                <li><a href="">SQL Refrence</a></li>
+                <li><a href="">Phyton Refrence</a></li>
+                <li><a href="">W.3CSS Refrence</a></li>
+                <li><a href="">Bootstrap Refrence</a></li>
+                <li><a href="">PHP Refrence</a></li>
+                <li><a href="">Java Refrence</a></li>
+                <li><a href="">C++ Refrence</a></li>
+                <li><a href="">jQuery Refrence</a></li>
+            </ul>
+        </div>
+        <div class="column">
+            <h3>Top Examples</h3>
+            <ul>
+                <li><a href="">Html Examples</a></li>
+                <li><a href="">CSS Examples</a></li>
+                <li><a href="">JavaScript Examples</a></li>
+                <li><a href="">How To Examples</a></li>
+                <li><a href="">SQL Examples</a></li>
+                <li><a href="">Phyton Examples</a></li>
+                <li><a href="">W.3CSS Examples</a></li>
+                <li><a href="">Bootstrap Examples</a></li>
+                <li><a href="">PHP Examples</a></li>
+                <li><a href="">Java Examples</a></li>
+                <li><a href="">C++ Examples</a></li>
+                <li><a href="">jQuery Examples</a></li>
+            </ul>
+        </div>
+        <div class="column">
+            <h3>Get Certified</h3>
+            <ul>
+                <li><a href="">Html Certificate</a></li>
+                <li><a href="">CSS Certificate</a></li>
+                <li><a href="">JavaScript Certificate</a></li>
+                <li><a href="">How To Certificate</a></li>
+                <li><a href="">SQL Certificate</a></li>
+                <li><a href="">Phyton Certificate</a></li>
+                <li><a href="">W.3CSS Certificate</a></li>
+                <li><a href="">Bootstrap Certificate</a></li>
+                <li><a href="">PHP Certificate</a></li>
+                <li><a href="">Java Certificate</a></li>
+                <li><a href="">C++ Certificate</a></li>
+                <li><a href="">jQuery Certificate</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <div class="logo d-inline-block">
+            <a href=""><i class="fa-brands fa-discord"></i></a>
+            <a href=""><i class="fa-brands fa-linkedin"></i></a>
+            <a href=""><i class="fa-brands fa-youtube"></i></a>
+            <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+        </div>
+        <nav class="d-inline-block">
+            <a href="">Forum</a>
+            <a href="">About</a>
+            <a href="">Accademy</a>
+        </nav>
+        <div class="text text-center mt-2">
+            <p>W3Schools is optimized for learning and training. Examples might be simplified to improve reading and learning. Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content. While using W3Schools, you agree to have read and accepted our terms of use, cookie and privacy policy.</p>
+            <p>Copyright 1999-2025 by Refsnes Data. All Rights Reserved. W3Schools is Powered by W3.CSS.</p>
+        </div>
+    </footer>
+  </div>
+</body>
+</html>
