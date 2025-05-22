@@ -1,0 +1,150 @@
+/* Custom CSS */
+:root {
+    --w3-green: #04AA6D;
+    --w3-light-green: #D9EEE1;
+}
+
+body {
+    font-family: 'Verdana', sans-serif;
+}
+
+.w3-logo {
+    font-size: 32px;
+    font-weight: bold;
+    color: #04AA6D;
+}
+
+.main-nav {
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.language-bar {
+    background-color: #282A35;
+    color: white;
+    overflow-x: auto;
+    white-space: nowrap;
+    top: 70px;
+}
+
+.language-bar a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: inline-block;
+}
+
+.language-bar a:hover {
+    background-color: black;
+}
+
+.language-bar a.active {
+    background-color: var(--w3-green);
+}
+
+.sidebar {
+    height: 100%;
+    background-color: #f5f5f5;
+    overflow-y: auto;
+    top: 125px;
+}
+
+.tgl-sidebar {
+    display: none;
+}
+
+.btn-close {
+    display: none;
+}
+
+.sidebar-item {
+    padding: 8px 15px;
+    display: block;
+    text-decoration: none;
+    color: black;
+    border-left: 4px solid transparent;
+}
+
+.sidebar-item:hover {
+    background-color: #eee;
+}
+
+.sidebar-item.active {
+    background-color: var(--w3-green);
+    color: white;
+}
+
+.sidebar-item.has-submenu::after {
+    content: "\f078";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    float: right;
+    font-size: 12px;
+}
+
+.main-content {
+    padding: 20px;
+}
+
+.tutorial-box {
+    background-color: var(--w3-light-green);
+    padding: 32px;
+    margin-bottom: 32px;
+    border-radius: 5px;
+}
+
+.nav-btn {
+    background-color: var(--w3-green);
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.nav-btn:hover {
+    background-color: #059862;
+    color: white;
+}
+
+.color-picker {
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, red, orange, yellow, green, blue, indigo, violet);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    margin: 20px auto;
+}
+
+.social-icons a {
+    margin: 0 8px;
+    color: black;
+    font-size: 24px;
+}
+
+/* Responsive Sidebar */
+@media (max-width: 768px) {
+    .sidebar {
+        position: fixed;
+        left: -250px;
+        width: 250px;
+        height: 100vh;
+        z-index: 1000;
+        transition: left 0.3s;
+    }
+
+    .tgl-sidebar {
+        display: inline;
+    }
+
+    .btn-close {
+        display: inline;
+    }
+    
+    .sidebar.show {
+        left: 0;
+    }
+    
+    .sidebar-toggle {
+        display: block !important;
+    }
+}

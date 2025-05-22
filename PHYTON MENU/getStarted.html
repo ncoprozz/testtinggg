@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Python Tutorial</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <!-- Top Navigation Bar -->
+    <nav class="navbar navbar-expand-lg main-nav fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="img/w3schools-logo.png" alt="logo" width="50">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Tutorials
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Exercises
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Certificates
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Services
+                        </a>
+                    </li>
+                </ul>
+
+                <form class="d-flex me-2">
+                    <div class="input-group">
+                        <input class="form-control" type="search" placeholder="Search..." />
+                        <button class="btn btn-outline-secondary" type="submit">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </form>
+
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="darkModeSwitch" />
+                </div>
+
+                <a href="#" class="btn text-decoration-none">
+                    <i class="fas fa-graduation-cap"></i> For Teachers
+                </a>
+
+                <a href="#" class="btn text-decoration-none">
+                    <i class="fas fa-award"></i> Get Certified
+                </a>
+
+                <a href="#" class="btn btn-success">Sign Up</a>
+                <a href="#" class="btn btn-outline-success">Log in</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Language Navigation Bar -->
+    <div class="language-bar sticky-top">
+        <!-- Sidebar Toggle Button (Moved Here) -->
+        <button class="btn btn-outline-light btn-sm tgl-sidebar m-1" type="button" data-bs-toggle="collapse"
+            data-bs-target="#sidebar">
+            <i class="fas fa-bars"></i>
+        </button>
+        <a href="#">HTML</a>
+        <a href="#">CSS</a>
+        <a href="#">JAVASCRIPT</a>
+        <a href="#">SQL</a>
+        <a href="#" class="active">PYTHON</a>
+        <a href="#">JAVA</a>
+        <a href="#">PHP</a>
+        <a href="#">HOW TO</a>
+        <a href="#">W3.CSS</a>
+        <a href="#">C</a>
+        <a href="#">C++</a>
+        <a href="#">C#</a>
+        <a href="#">BOOTSTRAP</a>
+        <a href="#">REACT</a>
+        <a href="#">MYSQL</a>
+        <a href="#">JQUERY</a>
+        <a href="#">EXCEL</a>
+        <a href="#">XML</a>
+        <a href="#">DJANGO</a>
+        <a href="#">NUMPY</a>
+        <a href="#">PANDAS</a>
+        <a href="#">NODEJS</a>
+        <a href="#">DSA</a>
+        <a href="#">TYPESCRIPT</a>
+        <a href="#">ANGULAR</a>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+             <!-- Sidebar -->
+             <div id="sidebar" class="col-md-3 col-lg-2 sidebar p-0 vh-100 sticky-top overflow-auto">
+                <div class="d-flex justify-content-between align-items-center p-3 bg-light border-bottom">
+                    <h5 class="m-0">Python Tutorial</h5>
+                    <button class="btn-close" aria-label="Close" data-bs-toggle="collapse"
+                        data-bs-target="#sidebar"></button>
+                </div>
+                <a href="index.html" class="sidebar-item">Python HOME</a>
+                <a href="intro.html" class="sidebar-item">Python Intro</a>
+                <a href="getStarted.html" class="sidebar-item active">Python Get Started</a>
+                <a href="syntax.html" class="sidebar-item">Python Syntax</a>
+                <a href="comments.html" class="sidebar-item">Python Comments</a>
+                <!-- Dropdown Menu -->
+                <a href="#" class="sidebar-item has-submenu" data-bs-toggle="collapse" data-bs-target="#variablesDropdown" aria-expanded="false">
+                    Python Variables
+                </a>
+                <div id="variablesDropdown" class="collapse">
+                    <a href="pyVariables.html" class="sidebar-item bg-white ps-5">Python Variables</a>
+                    <a href="#" class="sidebar-item bg-white ps-5">Variable Names</a>
+                    <a href="#" class="sidebar-item bg-white ps-5">Assign Multiple Values</a>
+                    <a href="#" class="sidebar-item bg-white ps-5">Output Variables</a>
+                    <a href="#" class="sidebar-item bg-white ps-5">Global Variables</a>
+                    <a href="#" class="sidebar-item bg-white ps-5">Variable Exercises</a>
+                </div>
+                <a href="dataTypes.html" class="sidebar-item">Python Data Types</a>
+                <a href="numbers.html" class="sidebar-item">Python Numbers</a>
+                <a href="casting.html" class="sidebar-item">Python Casting</a>
+                <a href="#" class="sidebar-item has-submenu" data-bs-toggle="collapse" data-bs-target="#stringsDropdown" aria-expanded="false">
+                    Python Strings
+                </a>
+                <div id="stringsDropdown" class="collapse">
+                    <a href="pyStrings.html" class="sidebar-item bg-white ps-5">Python Strings</a>
+                    <a href="#" class="sidebar-item bg-white ps-5">Slicing Strings</a>
+                    <a href="#" class="sidebar-item bg-white ps-5">Modify Strings</a>
+                    <a href="#" class="sidebar-item bg-white ps-5">Concatenate Strings</a>
+                    <a href="#" class="sidebar-item bg-white ps-5">Format Strings</a>
+                    <a href="#" class="sidebar-item bg-white ps-5">Escape Characters</a>
+                    <a href="#" class="sidebar-item bg-white ps-5">String Methods</a>
+                    <a href="#" class="sidebar-item bg-white ps-5">String Exercises</a>
+                </div>
+                <a href="#" class="sidebar-item">Python Booleans</a>
+                <a href="#" class="sidebar-item">Python Operators</a>
+                <a href="#" class="sidebar-item">Python Lists</a>
+                <a href="#" class="sidebar-item">Python Tuples</a>
+                <a href="#" class="sidebar-item">Python Sets</a>
+                <a href="#" class="sidebar-item">Python Dictionaries</a>
+                <a href="#" class="sidebar-item">Python If...Else</a>
+                <a href="#" class="sidebar-item">Python While Loops</a>
+                <a href="#" class="sidebar-item">Python For Loops</a>
+                <a href="#" class="sidebar-item">Python Functions</a>
+                <a href="#" class="sidebar-item">Python Lambda</a>
+                <a href="#" class="sidebar-item">Python Arrays</a>
+                <a href="#" class="sidebar-item">Python Classes/Objects</a>
+                <a href="#" class="sidebar-item">Python Inheritance</a>
+                <a href="#" class="sidebar-item">Python Iterators</a>
+                <a href="#" class="sidebar-item">Python Polymorphism</a>
+                <a href="#" class="sidebar-item">Python Scope</a>
+                <a href="#" class="sidebar-item">Python Modules</a>
+                <a href="#" class="sidebar-item">Python Dates</a>
+                <a href="#" class="sidebar-item">Python Math</a>
+                <a href="#" class="sidebar-item">Python JSON</a>
+                <a href="#" class="sidebar-item">Python RegEx</a>
+                <a href="#" class="sidebar-item">Python PIP</a>
+                <a href="#" class="sidebar-item">Python Try...Except</a>
+                <a href="#" class="sidebar-item">Python User Input</a>
+                <a href="#" class="sidebar-item">Python String Formatting</a>
+            </div>
+
+            <!-- Main Content + Sidebar Kanan -->
+            <div class="col-md-9 col-lg-10">
+                <div class="row">
+                    <!-- Konten Utama -->
+                    <!-- Main Content -->
+                    <div class="col-md-9 col-lg-10 p-5 main-content">
+                        <h1 class="mb-4 mt-5">Python Getting Started</h1>
+
+                        <div class="d-flex justify-content-between mb-4">
+                            <a href="intro.html" class="nav-btn">
+                                <i class="fas fa-chevron-left"></i> Previous
+                            </a>
+                            <a href="syntax.html" class="nav-btn">
+                                Next <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+
+                        <div class="mt-4">
+                            <h2>Python Install</h2>
+                            <br />
+                            <p>
+                                Many PCs and Macs will have python already installed. <br><br>
+                                To check if you have python installed on a Windows PC, search in the start bar for Python or run the following on the Command Line (cmd.exe):
+                            </p>
+                            <div class="border p-3 bg-light">
+                                <div class="bg-dark p-3 border position-relative">
+                                    <div class="border-start border-success border-4 ps-2">
+                                        <code class="text-white">C:\Users\Your Name>python --version</code>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <p>
+                                To check if you have python installed on a Linux or Mac, then on linux open the command line or on Mac open the Terminal and type:
+                            </p>
+                            <div class="border p-3 bg-light">
+                                <div class="bg-dark p-3 border position-relative">
+                                    <div class="border-start border-success border-4 ps-2">
+                                        <code class="text-white">python --version</code>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <p>
+                                If you find that you do not have Python installed on your computer, then you can download it for free from the following website: <a href="https://www.python.org/">https://www.python.org/</a>
+                            </p>
+                        </div>
+
+                        <hr class="mt-4" />
+
+                        <div class="mt-4">
+                            <h2>Python Quickstart</h2>
+                            <br />
+                            <p>
+                                Python is an interpreted programming language, this means that as a developer you write Python (.py) files in a text editor and then put those files into the python interpreter to be executed.
+                                <br><br>The way to run a python file is like this on the command line:
+                            </p>
+                            <div class="border p-3 bg-light">
+                                <div class="bg-dark p-3 border position-relative">
+                                    <div class="border-start border-success border-4 ps-2">
+                                        <code class="text-white">C:\Users\Your Name>python helloworld.py</code>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <p>
+                                Where "helloworld.py" is the name of your python file.
+                                <br><br>Let's write our first Python file, called helloworld.py, which can be done in any text editor.
+                            </p>
+                            <div class="border p-3 bg-light">
+                                <div class="bg-white p-3 border position-relative">
+                                    <div class="border-start border-success border-4 ps-2">
+                                        <code>print("Hello, World!")</code>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <p>
+                                Simple as that. Save your file. Open your command line, navigate to the directory where you saved your file, and run:
+                            </p>
+                            <div class="border p-3 bg-light">
+                                <div class="bg-dark p-3 border position-relative">
+                                    <div class="border-start border-success border-4 ps-2">
+                                        <code class="text-white">C:\Users\Your Name>python helloworld.py</code>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <p>
+                                The output should read:
+                            </p>
+                            <div class="border p-3 bg-light">
+                                <div class="bg-dark p-3 border position-relative">
+                                    <div class="border-start border-success border-4 ps-2">
+                                        <code class="text-white">Hello, World!
+                                        </code>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>Congratulations, you have written and executed your first Python program.                            </p>
+                        </div>
+
+                        <hr class="mt-4" />
+
+                        <h2 class="mt-4">W3Schools' Python Editor</h2>
+                        <br />
+                        <p>
+                            We have an online Python editor where you can execute your own Python code and see the result:
+                        </p>
+
+                        <div class="border p-3 bg-light">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <h3 class="m-0">Example</h3>
+                                <button class="btn btn-dark">
+                                    Get your own Python Server
+                                </button>
+                            </div>
+                            <p>Try our online Python editor:
+
+                            </p>
+                            <div class="bg-white p-3 border position-relative">
+                                <div class="border-start border-success border-4 ps-2">
+                                    <code>print("Hello, World!")</code>
+                                </div>
+                            </div>
+                            <div class="mt-3">
+                                <button class="btn btn-success">Try it Yourself »</button>
+                            </div>
+                        </div>
+                        <br>
+                        <p>This editor will be used in the entire tutorial to demonstrate the different aspects of Python.</p>
+
+                        <hr class="mt-4" />
+
+                        <h2 class="mt-4">Python Version</h2>
+                        <br />
+                        <p>
+                            To check the Python version of the editor, you can find it by importing the <code>sys</code> module:
+                        </p>
+
+                        <div class="border p-3 bg-light">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <h3 class="m-0">Example</h3>
+
+                            </div>
+                            <p>Check the Python version of the editor:
+
+                            </p>
+                            <div class="bg-white p-3 border position-relative">
+                                <div class="border-start border-success border-4 ps-2">
+                                    <code>import sys
+                                        <br><br>
+                                        print(sys.version)</code>
+                                </div>
+                            </div>
+                            <div class="mt-3">
+                                <button class="btn btn-success">Try it Yourself »</button>
+                            </div>
+                        </div><br>
+                        <p>You will learn more about importing modules in our Python Modules chapter.</p>
+
+                        <hr class="mt-4" />
+
+                        <div class="mt-4">
+                            <h2>The Python Command Line</h2>
+                            <br />
+                            <p>
+                                To test a short amount of code in python sometimes it is quickest and easiest not to write the code in a file. This is made possible because Python can be run as a command line itself.
+                                <br><br>Type the following on the Windows, Mac or Linux command line:
+                            </p>
+                            <div class="border p-3 bg-light">
+                                <div class="bg-dark p-3 border position-relative">
+                                    <div class="border-start border-success border-4 ps-2">
+                                        <code class="text-white">C:\Users\Your Name>python</code>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <p>
+                                Or, if the "python" command did not work, you can try "py":
+                            </p>
+                            <div class="border p-3 bg-light">
+                                <div class="bg-dark p-3 border position-relative">
+                                    <div class="border-start border-success border-4 ps-2">
+                                        <code class="text-white">C:\Users\Your Name>py</code>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <p>
+                                From there you can write any python, including our hello world example from earlier in the tutorial:
+                            </p>
+                            <div class="border p-3 bg-light">
+                                <div class="bg-dark p-3 border position-relative">
+                                    <div class="border-start border-success border-4 ps-2">
+                                        <code><div class="text-secondary">C:\Users\Your Name>python <br>
+                                            Python 3.6.4 (v3.6.4:d48eceb, Dec 19 2017, 06:04:45) [MSC v.1900 32 bit (Intel)] on win32 <br>
+                                            Type "help", "copyright", "credits" or "license" for more information. <br>
+                                            </div>
+                                            <span class="text-white">>>> print("Hello, World!") 
+                                            </span></code>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <p>
+                                Which will write "Hello, World!" in the command line:
+                            </p>
+                            <div class="border p-3 bg-light">
+                                <div class="bg-dark p-3 border position-relative">
+                                    <div class="border-start border-success border-4 ps-2">
+                                        <code><div class="text-secondary">
+                                            C:\Users\Your Name>python <br>
+                                            Python 3.6.4 (v3.6.4:d48eceb, Dec 19 2017, 06:04:45) [MSC v.1900 32 bit (Intel)] on win32 <br>
+                                            Type "help", "copyright", "credits" or "license" for more information. <br>
+                                            >>> print("Hello, World!") <br>
+                                            </div>
+                                            <span class="text-white">Hello, World!
+
+                                            </span></code>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <p>
+                                Whenever you are done in the python command line, you can simply type the following to quit the python command line interface:                            </p>
+                            <div class="border p-3 bg-light">
+                                <div class="bg-dark p-3 border position-relative">
+                                    <div class="border-start border-success border-4 ps-2">
+                                        <code class="text-white">exit()</code>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+
+                            <div class="p-4 rounded" style="background-color: #2b3648">
+                                <div class="text-center mb-4">
+                                    <h2 class="text-white d-inline-block">Exercise</h2>
+                                    <br />
+                                    <span class="badge rounded-circle bg-secondary text-white ms-2">?</span>
+                                </div>
+
+                                <div class="text-center mb-4">
+                                    <p class="text-white">
+                                        What is the correct file extension for Python files?
+                                    </p>
+                                </div>
+
+                                <div class="mb-2">
+                                    <div class="p-3 mb-2 bg-secondary bg-opacity-25 rounded text-white">
+                                        <input type="radio" name="answer" id="answer1" class="me-2" />
+                                        <label for="answer1">.pp</label>
+                                    </div>
+
+                                    <div class="p-3 mb-2 bg-secondary bg-opacity-25 rounded text-white">
+                                        <input type="radio" name="answer" id="answer2" class="me-2" />
+                                        <label for="answer2">.pt</label>
+                                    </div>
+
+                                    <div class="p-3 mb-2 bg-secondary bg-opacity-25 rounded text-white">
+                                        <input type="radio" name="answer" id="answer3" class="me-2" />
+                                        <label for="answer3">.py</label>
+                                    </div>
+
+                                    </div>
+                                    <div class="text-center mt-4">
+                                        <button class="btn btn-success px-4 py-2">
+                                            Submit Answer »
+                                        </button>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <h2 class="mt-5 text-center">Video : Python Get Started</h2>
+                            <a href="https://youtu.be/z116jFWdfQc&list=PLP9IO4UYNF0UgPfkTBECSKIJGdc_9FYZ9" target="_blank">
+                                <img src="https://www.w3schools.com/python/images/img_python_getstarted.webp" class="w-100" alt="intro">
+                            </a>
+
+                        <div class="d-flex justify-content-between mt-5 mb-4">
+                            <a href="intro.html" class="nav-btn">
+                                <i class="fas fa-chevron-left"></i> Previous
+                            </a>
+                            <a href="syntax.html" class="nav-btn">
+                                Next <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                        <div
+                            class="bg-dark p-4 d-flex flex-column flex-md-row align-items-center justify-content-between rounded shadow-lg position-relative text-center text-md-start w-100">
+                            <h3 class="fw-bold text-white m-3">Track Your Progress - it's free!</h3>
+                            <div class="d-flex flex-column flex-sm-row gap-3">
+                                <a href="#" class="btn btn-success">Sign Up</a>
+                                <a href="#" class="btn btn-outline-success">Log in</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <!-- Sidebar Kanan -->
+                    <div class="col-md-2 mt-5">
+                        <div class="card mb-4 mt-5">
+                            <img src="img/advertise.png" alt="Python Learning Resources" class="card-img-top" />
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header">COLOR PICKER</div>
+                            <div class="card-body">
+                                <img src="img/color.png" alt="color" width="100">
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-4">
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-discord"></i></a>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="py-5" style="background-color: #272b37; color: white">
+        <div class="container">
+            <!-- Top Navigation Menus -->
+            <div class="row mb-5 w-100 justify-content-center">
+                <!-- Logo Column -->
+                <div
+                    class="mb-5 mx-5 w-100 d-flex flex-column flex-md-row align-items-center justify-content-center gap-3 text-center">
+                    <a href="#" class="text-decoration-none">
+                        <img src="img/w3schools-logo.png" alt="W3Schools" width="80" />
+                    </a>
+                    <div class="d-flex flex-wrap justify-content-center gap-2">
+                        <a href="#" class="p-2 fs-5 fw-bold text-warning text-decoration-none">PLUS</a>
+                        <a href="#" class="p-2 fs-5 fw-bold text-warning text-decoration-none">SPACES</a>
+                        <a href="#" class="p-2 fs-5 fw-bold text-warning text-decoration-none">GET CERTIFIED</a>
+                        <a href="#" class="p-2 fs-5 fw-bold text-warning text-decoration-none">FOR TEACHER</a>
+                        <a href="#" class="p-2 fs-5 fw-bold text-warning text-decoration-none">FOR BUSINESS</a>
+                        <a href="#" class="p-2 fs-5 fw-bold text-warning text-decoration-none">CONTACT US</a>
+                    </div>
+                </div>
+
+
+                <!-- Menu Columns -->
+                <div class="col-lg-9 text-center">
+                    <div class="row">
+                        <!-- Menu 1: Top Tutorials -->
+                        <div class="col-md-3 mb-4">
+                            <h5 class="fw-bold mb-3">Top Tutorials</h5>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">HTML Tutorial</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">CSS Tutorial</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">JavaScript Tutorial</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">How To Tutorial</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">SQL Tutorial</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">Python Tutorial</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">W3.CSS Tutorial</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">Bootstrap Tutorial</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">PHP Tutorial</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">Java Tutorial</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">C++ Tutorial</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">jQuery Tutorial</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Menu 2: Top References -->
+                        <div class="col-md-3 mb-4">
+                            <h5 class="fw-bold mb-3">Top References</h5>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">HTML Reference</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">CSS Reference</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">JavaScript Reference</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">SQL Reference</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">Python Reference</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">W3.CSS Reference</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">Bootstrap Reference</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">PHP Reference</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">HTML Colors</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">Java Reference</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">Angular Reference</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">jQuery Reference</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Menu 3: Top Examples -->
+                        <div class="col-md-3 mb-4">
+                            <h5 class="fw-bold mb-3">Top Examples</h5>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">HTML Examples</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">CSS Examples</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">JavaScript Examples</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">How To Examples</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">SQL Examples</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">Python Examples</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">W3.CSS Examples</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">Bootstrap Examples</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">PHP Examples</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">Java Examples</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">XML Examples</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">jQuery Examples</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Menu 4: Get Certified -->
+                        <div class="col-md-3 mb-4">
+                            <h5 class="fw-bold mb-3">Get Certified</h5>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">HTML Certificate</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">CSS Certificate</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">JavaScript Certificate</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">Front End Certificate</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">SQL Certificate</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">Python Certificate</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">PHP Certificate</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">jQuery Certificate</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">Java Certificate</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">C++ Certificate</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">C# Certificate</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">XML Certificate</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social Media Links -->
+            <div class="text-center mb-4">
+                <a href="#" class="text-decoration-none mx-2">
+                    <i class="fab fa-youtube text-white"></i>
+                </a>
+                <a href="#" class="text-decoration-none mx-2">
+                    <i class="fab fa-linkedin text-white"></i>
+                </a>
+                <a href="#" class="text-decoration-none mx-2">
+                    <i class="fab fa-discord text-white"></i>
+                </a>
+                <a href="#" class="text-decoration-none mx-2">
+                    <i class="fab fa-facebook text-white"></i>
+                </a>
+                <a href="#" class="text-decoration-none mx-2">
+                    <i class="fab fa-instagram text-white"></i>
+                </a>
+                <a href="#" class="text-decoration-none mx-2 text-white">FORUM</a>
+                <a href="#" class="text-decoration-none mx-2 text-white">ABOUT</a>
+                <a href="#" class="text-decoration-none mx-2 text-white">ACADEMY</a>
+            </div>
+
+            <!-- Footer Text -->
+            <div class="text-center text-white-50 mb-3">
+                <p>
+                    W3Schools is optimized for learning and training. Examples might be
+                    simplified to improve reading and learning. Tutorials, references,
+                    and examples are constantly reviewed to avoid errors, but we cannot
+                    warrant full correctness of all content. While using W3Schools, you
+                    agree to have read and accepted our
+                    <a href="#" class="text-white-50">terms of use</a>,
+                    <a href="#" class="text-white-50">cookie and privacy policy</a>.
+                </p>
+            </div>
+
+            <!-- Copyright -->
+            <div class="text-center text-white-50">
+                <p>
+                    Copyright 1999-2025 by Refsnes Data. All Rights Reserved. W3Schools
+                    is Powered by W3.CSS.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
